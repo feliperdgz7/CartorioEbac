@@ -120,46 +120,59 @@ int main()
 	int opcao=0; //Definindo variavel.
 	int x=1; //Definindo variavel de repetição.
 	
-	for(x=1;x=1;)
-	{
-		system("cls"); //Limpa a tela.
-		
-		setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem.
+	char senhadigitada[10]="a";
+	int comparacao; //Definindo variavel de compração
+	printf("Login de Administrador\n\nDigite sua senha: ");
+	scanf("%s",senhadigitada);
 	
-		printf("\tCartório EBAC \n\n");
-		printf("\tMenu\n"); 
-		printf("Escolha a opção desejada:\n\n"); //Inicio do menu.
-		printf("1- Regristrar um Usuário\n"); //Opção para registrar um nome.
-		printf("2- Consultar um Usuário\n"); //Opção para consultar um nome criado.
-		printf("3- Deletar um Usuário\n"); //Opção para deletar um nome que foi criado.
-		printf("4- Sair do sistema\n\n"); //Opção para fechar o sistema.
-		printf("Opção: ");
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)
+	{
 		
-		scanf("%d", &opcao); //Armazenando opção desejada.
-		
-		system("cls"); //Limpa a tela.
-		switch(opcao)
+		for(x=1;x=1;)
 		{
-			case 1: //Regristro de nome.
-				registro(); //Chamar função registro.
-				break;
-			case 2: //Consulta de nome.
-				consultar(); //Chamar função consultar.
-				break;
-			case 3: //Deletar nome.
-				deletar(); //Chamar função deletar.
-				break;	
-			case 4: //Fechar o sistema.
-				printf("Obrigado por utilizar o sistema!\n");
-				return 0;
-				break;
-			default: //Opçao invalida.
-				printf("Opção invalida!\n");
-				system("pause");
-				break;		
-		}
+			system("cls"); //Limpa a tela.
 		
+			setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem.
+	
+			printf("\tCartório EBAC \n\n");
+			printf("\tMenu\n"); 
+			printf("Escolha a opção desejada:\n\n"); //Inicio do menu.
+			printf("1- Regristrar um Usuário\n"); //Opção para registrar um nome.
+			printf("2- Consultar um Usuário\n"); //Opção para consultar um nome criado.
+			printf("3- Deletar um Usuário\n"); //Opção para deletar um nome que foi criado.
+			printf("4- Sair do sistema\n\n"); //Opção para fechar o sistema.
+			printf("Opção: ");
+		
+			scanf("%d", &opcao); //Armazenando opção desejada.
+		
+			system("cls"); //Limpa a tela.
+			switch(opcao)
+			{
+				case 1: //Regristro de nome.
+					registro(); //Chamar função registro.
+					break;
+				case 2: //Consulta de nome.
+					consultar(); //Chamar função consultar.
+					break;
+				case 3: //Deletar nome.
+					deletar(); //Chamar função deletar.
+					break;	
+				case 4: //Fechar o sistema.
+					printf("Obrigado por utilizar o sistema!\n");
+					return 0;
+					break;
+				default: //Opçao invalida.
+					printf("Opção invalida!\n");
+					system("pause");
+					break;		
+			}
+		}
 	
 	}
+	
+	else
+		printf("Senha Incorreta!");
 }
 
