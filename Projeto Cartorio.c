@@ -131,7 +131,8 @@ int main()
 		printf("Escolha a opção desejada:\n\n"); //Inicio do menu.
 		printf("1- Regristrar um Usuário\n"); //Opção para registrar um nome.
 		printf("2- Consultar um Usuário\n"); //Opção para consultar um nome criado.
-		printf("3- Deletar um Usuário\n\n"); //Opção para deletar um nome que foi criado.
+		printf("3- Deletar um Usuário\n"); //Opção para deletar um nome que foi criado.
+		printf("4- Sair do sistema\n\n"); //Opção para fechar o sistema.
 		printf("Opção: ");
 		
 		scanf("%d", &opcao); //Armazenando opção desejada.
@@ -148,6 +149,10 @@ int main()
 			case 3: //Deletar nome.
 				deletar(); //Chamar função deletar.
 				break;	
+			case 4: //Fechar o sistema.
+				printf("Obrigado por utilizar o sistema!\n");
+				return 0;
+				break;
 			default: //Opçao invalida.
 				printf("Opção invalida!\n");
 				system("pause");
